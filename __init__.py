@@ -1,4 +1,4 @@
-from . import detector, 
+from . import detector
 from . import featurevectors
 from . import video_functions
 from . import evaluation
