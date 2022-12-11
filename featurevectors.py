@@ -3,6 +3,7 @@ import cv2
 from tqdm import tqdm
 import pickle
 import numpy as np
+import hashlib
 from math import sqrt
 
 def get_frame(frame_index, video):
