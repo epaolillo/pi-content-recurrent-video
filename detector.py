@@ -95,7 +95,7 @@ def query_episodes_with_faiss(videos, vectors_dir):
         (video_file_name, [list with all distances best match on each frame])
     """
 
-    vector_files = [os.path.join(vectors_dir,e.rsplit('/')[-3:-2]+'.p') for e in videos]
+    vector_files = [os.path.join(vectors_dir,e.rsplit('/')[-3:-2][0]+'.p') for e in videos]
     vectors = []
 
     # the lengths of each vector, will be used to query each episode
