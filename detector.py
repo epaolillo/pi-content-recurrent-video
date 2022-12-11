@@ -5,7 +5,6 @@ import numpy as np
 import pickle
 import faiss
 import datetime
-import hashlib
 from natsort import natsorted, ns
 
 # internal imports
@@ -96,7 +95,7 @@ def query_episodes_with_faiss(videos, vectors_dir):
         (video_file_name, [list with all distances best match on each frame])
     """
 
-    vector_files = [os.path.join(vectors_dir,hashlib.md5(e).hexdigest()+'.p') for e in videos]
+    vector_files = [os.path.join(vectors_dir,hash(e)+'.p') for e in videos]
     vectors = []
 
     # the lengths of each vector, will be used to query each episode

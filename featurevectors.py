@@ -3,7 +3,6 @@ import cv2
 from tqdm import tqdm
 import pickle
 import numpy as np
-import hashlib
 from math import sqrt
 
 def get_frame(frame_index, video):
@@ -82,7 +81,7 @@ def construct_feature_vectors(video_url, result_dir_name, vector_function, frame
     which it then writes to a pickle file.
     """
     
-    base_video_fn = "/".join(hashlib.md5(video_url).hexdigest())
+    base_video_fn = "/".join(hash(video_url))
     video = cv2.VideoCapture(video_url)
     vectors_fn = os.path.join(result_dir_name, base_video_fn + ".p")
 
