@@ -81,7 +81,7 @@ def construct_feature_vectors(video_url, result_dir_name, vector_function, frame
     which it then writes to a pickle file.
     """
     
-    base_video_fn = hash(video_url)
+    base_video_fn = str(hash(video_url))
     video = cv2.VideoCapture(video_url)
     vectors_fn = os.path.join(result_dir_name, base_video_fn + ".p")
 
