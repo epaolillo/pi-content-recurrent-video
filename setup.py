@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setup(name='Content recurrent detector',
+setup(name='contentRecurrent',
       version='0.1',
       description='For detect content recurrent on videos',
       url='https://github.com/epaolillo/pi-content-recurrent-video',
